@@ -7,7 +7,7 @@
       <input type="text" placeholder="Username" id="username" v-model="username">
       <input type="password" placeholder="Password" id="password" class="password">
       <div class="panel clearfix">
-        <button v-on:click="login" class="button float-right">Login</button>
+        <router-link v-bind:to="'profile'" class="button float-right">Login</router-link>
       </div>
     </form>
   </div>
@@ -26,7 +26,7 @@ export default {
   methods: {
     login(event) {
       var base = "http://127.0.0.1:8000";
-      axios.get(base + "/registration/register").then(response => {
+      axios.get(base + "/registration/register/").then(response => {
         this.username = response.data.response;
       });
     }
