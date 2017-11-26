@@ -35,5 +35,9 @@ export default {
 .top-bar ul {
   background-color: #f9f9f9;
 }
+
+.router-link-exact-active {
+  font-weight: bold;
+}
 </style>
 

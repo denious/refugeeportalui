@@ -2,14 +2,13 @@
   <div class="page">
     <hr>
     <h3>Login</h3>
-
     <form>
       <input type="text" placeholder="Username" id="username" v-model="username">
       <input type="password" placeholder="Password" id="password" class="password">
-      <div class="panel clearfix">
-        <router-link v-bind:to="'profile'" class="button float-right">Login</router-link>
-      </div>
     </form>
+    <div class="panel clearfix">
+      <router-link v-bind:to="'profile'" class="button float-right">Login</router-link>
+    </div>
   </div>
 </template>
 

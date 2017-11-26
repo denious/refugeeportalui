@@ -13,14 +13,15 @@
           <router-link to="/profile">user's profile</router-link> to update their private information.
         </p>
       </div>
-      <form v-else>
-        <input type="text" placeholder="Username" id="username" v-model="username">
-        <input type="password" placeholder="Password" id="password" v-model="password">
-
+      <div v-else>
+        <form>
+          <input type="text" placeholder="Username" id="username" v-model="username">
+          <input type="password" placeholder="Password" id="password" v-model="password">
+        </form>
         <div class="panel clearfix">
           <button v-on:click="register" class="button float-right">Register</button>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </template>
