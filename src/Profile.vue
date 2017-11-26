@@ -43,13 +43,15 @@ export default {
     fetchData() {
       this.loading = true;
 
-      var base = "http://127.0.0.1:8000";
-      axios.get(base + "/information/").then(response => {
-        this.loading = false;
-        this.fullname = "Sigmund Isidoro";
-        this.dob = "1963-02-12";
-        this.publicKey = response.data.public_key;
-      });
+      setTimeout(() => {
+        var base = "http://127.0.0.1:8000";
+        axios.get(base + "/information/").then(response => {
+          this.loading = false;
+          this.fullname = "Sigmund Isidoro";
+          this.dob = "1963-02-12";
+          this.publicKey = response.data.public_key;
+        });
+      }, 1000);
     },
     update(event) {
       this.loading = true;
